@@ -2,7 +2,7 @@ const express = require("express");
 const { engine } = require("express-handlebars");
 const { getUsers, getUserById, deleteUser, createUser } = require("./users");
 const app = express();
-const port = 4000;
+const port = process.env.DATABASE_URL || 4000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
