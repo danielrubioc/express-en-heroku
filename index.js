@@ -2,7 +2,7 @@ const express = require("express");
 const { engine } = require("express-handlebars");
 const { getUsers, getUserById, deleteUser, createUser } = require("./users");
 const app = express();
-const port = process.env.DATABASE_URL || 4000;
+const PORT = process.env.DATABASE_URL || 5000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -43,6 +43,6 @@ app.delete("/users/:id", async (req, res) => {
     return res.json(response);
 });
 
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
+app.listen(PORT, () => {
+    console.log(`Example app listening at http://localhost:${PORT}`);
 });
