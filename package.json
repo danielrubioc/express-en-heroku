@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "dev": "node .",
+        "start": "node .",
         "test:db": "node db.js",
         "migrate:db": "node migrate.js"
     },
