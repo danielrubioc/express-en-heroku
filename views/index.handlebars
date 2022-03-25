@@ -1,0 +1,39 @@
+<div class="container m-6">
+    <div class="columns">
+        <div class="column">
+            <div class="card mt-6">
+                <div class="card-content">
+                    <div class="content">
+                        <a href="/user-create" class="button is-success">Nuevo
+                            Usuario</a>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>Username</th>
+                                    <th>Email</th>
+                                    <th>Contraseña</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each todos}}
+                                    <tr>
+                                        <th>{{this.id}}</th>
+                                        <td>{{this.username}}</td>
+                                        <td>{{this.email}}</td>
+                                        <td>{{this.password}}</td>
+                                        <td><a
+                                                class="button is-danger"
+                                                href="users/{{this.id}}"
+                                            >Eliminar</a></td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

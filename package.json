@@ -1,0 +1,28 @@
+{
+    "name": "express-en-docker",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "dev": "node .",
+        "test:db": "node db.js",
+        "migrate:db": "node migrate.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/kradarc/express-en-docker.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/kradarc/express-en-docker/issues"
+    },
+    "homepage": "https://github.com/kradarc/express-en-docker#readme",
+    "dependencies": {
+        "dotenv": "^16.0.0",
+        "express": "^4.17.3",
+        "express-handlebars": "^6.0.3",
+        "pg": "^8.7.3"
+    }
+}

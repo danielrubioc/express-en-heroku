@@ -1,0 +1,70 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HTML</title>
+        <link rel="stylesheet" href="/static/css/bulma.css" />
+    </head>
+
+    <body>
+        <nav
+            class="navbar is-primary"
+            role="navigation"
+            aria-label="main navigation"
+        >
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    Simple Web
+                </a>
+            </div>
+
+            <div class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item">
+                        Inicio
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container m-6">
+            <div class="columns">
+                <div class="column">
+                    <h1>Servicio web</h1>
+                    <div class="card mt-6">
+                        <div class="card-content">
+                            <div class="content">
+
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>#</th>
+                                            <th>Title</th>
+                                            <th>Description</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {{#each todos}}
+                                            <tr>
+                                                <th>{{this.id}}</th>
+                                                <td>{{this.title}}</td>
+                                                <td>{{this.description}}</td>
+                                                <td><a
+                                                        href="todos/{{this.id}}"
+                                                    >ssd</a></td>
+                                            </tr>
+                                        {{/each}}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+</html>
