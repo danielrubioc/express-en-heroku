@@ -26,7 +26,7 @@ app.post("/users", async (req, res) => {
     return res.json(response);
 });
 
-app.get("/users/:id", async (req, res) => {
+app.get("/user-delete/:id", async (req, res) => {
     const { id } = req.params;
     const { data } = await getUserById(id);
     const user = await data[0];

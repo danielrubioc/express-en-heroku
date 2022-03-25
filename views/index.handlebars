@@ -13,6 +13,7 @@
                                     <th>Username</th>
                                     <th>Email</th>
                                     <th>Contraseña</th>
+                                    <th>Fecha</th>
                                     <th></th>
                                 </tr>
                             </thead>
@@ -23,9 +24,10 @@
                                         <td>{{this.username}}</td>
                                         <td>{{this.email}}</td>
                                         <td>{{this.password}}</td>
+                                        <td>{{this.date}}</td>
                                         <td><a
                                                 class="button is-danger"
-                                                href="users/{{this.id}}"
+                                                href="user-delete/{{this.id}}"
                                             >Eliminar</a></td>
                                     </tr>
                                 {{/each}}
