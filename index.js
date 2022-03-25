@@ -12,8 +12,8 @@ app.set("view engine", ".handlebars");
 app.set("views", "./views");
 
 app.get("/", async (req, res) => {
-    const todos = await getUsers();
-    res.render("index", { todos });
+    const { data } = await getUsers();
+    res.render("index", { users: data });
 });
 
 app.get("/user-create", async (req, res) => {
@@ -28,8 +28,8 @@ app.post("/users", async (req, res) => {
 
 app.get("/users/:id", async (req, res) => {
     const { id } = req.params;
-    const response = await getUserById(id);
-    const user = await response[0];
+    const { data } = await getUserById(id);
+    const user = await data[0];
     if (user) {
         res.render("delete", { user });
     } else {
